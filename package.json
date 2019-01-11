@@ -1,0 +1,36 @@
+{
+  "name": "knex-shit",
+  "version": "99.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "nodemon ./bin/server.js --exec babel-node -e js",
+    "startProd": "node ./build/bin/server.js",
+    "deploy": "npm run build && eb deploy",
+    "build": "",
+    "debug": "nodemon ./bin/server.js --exec babel-node -e js --inspect-brk"
+  },
+  "author": "Hiago Machado",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
+    "nodemon": "^1.18.7"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.0",
+    "express": "^4.16.2",
+    "knex": "^0.14.2",
+    "tedious": "2.2.4",
+    "mssql": "^4.1.0"
+  }
+}
